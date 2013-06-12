@@ -10,8 +10,7 @@ public abstract class Animal {
     
     //comment van diederik
     //comment van sebas
-    //comment van sebas 2
-    //comment van sebas 3
+
     public abstract Animal (Simulation sim){
     	
     }
