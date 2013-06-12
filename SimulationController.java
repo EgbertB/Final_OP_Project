@@ -10,7 +10,10 @@ public class SimulationController {
 	
 		
 	public static void main(String[] args) {
-		SimulationController controller = new SimulationController();	
+		SimulationController controller = new SimulationController();
+		// model
+		// view
+		// linken
 	}
 
 	

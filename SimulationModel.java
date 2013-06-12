@@ -11,6 +11,9 @@ public class SimulationModel {
 	    this.grid = new Grid();
 	}	
 	
-	
+	public void addAnimal(Animal a){
+		animals.add(a);
+		
+	}
 	
 }
