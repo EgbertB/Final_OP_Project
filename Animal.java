@@ -8,7 +8,7 @@ public abstract class Animal {
     private double energy;
     private int turnCost;
     
-    
+    //comment van diederik
     public abstract Animal (Simulation sim){
     	
     }
