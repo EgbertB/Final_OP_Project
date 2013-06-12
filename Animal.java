@@ -9,6 +9,7 @@ public abstract class Animal {
     private int turnCost;
     
     //comment van diederik
+    //comment van sebas
     public abstract Animal (Simulation sim){
     	
     }
