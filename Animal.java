@@ -2,20 +2,17 @@
 public abstract class Animal {
 	
 	// Attributes
-	private int xPosition;
-    private int yPosition;
-    private int age;
-    private double energy;
-    private int turnCost;
+	protected int xPosition;
+    protected int yPosition;
+    protected int age;
+    protected double energy;
+    protected double metabolism;
+    protected double moveCost;
+    protected int vision;
+    protected int procreateReq;
+    protected int procreateCost;
     
-    //comment van diederik
-    //comment van sebas
-
-    public abstract Animal (Simulation sim){
-    	
-    }
-    
-    abstract public void die();
+    abstract public void remove();
     
     public abstract void act();
     

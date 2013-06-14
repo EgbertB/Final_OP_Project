@@ -1,4 +1,6 @@
 
-public class Prey extends Animal {
+public abstract class Prey extends Animal {
+	
+	
 	
 }
