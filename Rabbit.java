@@ -2,7 +2,6 @@
 public class Rabbit extends Animal{
 
 	
-
 	public Rabbit(){
 		this.age = 0;
 		this.energy = 6;
@@ -31,12 +30,8 @@ public class Rabbit extends Animal{
 		}
 	}
 
-	// When an Agent dies, remove it from the Agent Vector, and remove
-    // it from the Site it was on.
-	@Override
-	public void remove() {
-	    	
-	}
+	
+
 
 	@Override
 	public void look() {

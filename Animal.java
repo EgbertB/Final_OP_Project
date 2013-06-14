@@ -1,3 +1,5 @@
+import java.util.Vector;
+
 
 public abstract class Animal {
 	
@@ -12,12 +14,26 @@ public abstract class Animal {
     protected int procreateReq;
     protected int procreateCost;
     
-    abstract public void remove();
     
+    // The remove and look methods are general Agent methods
+    public void remove(){
+    	// When an Agent dies, remove it from the Agent Vector, and remove
+        // it from the Site it was on.
+    	
+    	//sim.agents.remove(this);
+   		//sim.grid[xPosition][yPosition].setAgent(null);
+    	
+    }
+    
+    public void look(){
+    	
+    }
+    
+    
+    // The Act and decide methods are abstract and should be implemented by a concrete subclass
     public abstract void act();
-    
-    public abstract void look();
-    
+
     public abstract void decide();
+    
     
 }
