@@ -1,8 +1,13 @@
+import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
+import javax.swing.BoxLayout;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 
 public class SimulationController {
 	
@@ -16,7 +21,9 @@ public class SimulationController {
 	
 	// Visualization variables
 	private JFrame frame;
+	JPanel container;
 	private MainPanel mainPanel;
+	private InteractionPanel interactionPanel;
 	
 	// Constructor for setting up new animals and adding them to list
 	public SimulationController(){
@@ -59,23 +66,33 @@ public class SimulationController {
 	
 	// After the simulation is set up, this method is called in order to create a new GUI Frame and Panel
 	private void createGUI() {
-		frame = new JFrame("Predator-Prey Simulation");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+		frame = new JFrame("Predator-Prey Simulation");	
+				
+		container = new JPanel();
 		mainPanel = new MainPanel(this);
-		frame.add(mainPanel);
+		interactionPanel = new InteractionPanel(this);
 		
-		//frame.setResizable(false);
-		frame.setVisible(true);
+		container.setLayout(new BoxLayout(container, BoxLayout.X_AXIS));
+		mainPanel.setPreferredSize(new Dimension(500, 500));
+		interactionPanel.setPreferredSize(new Dimension(300, 300));
+
+		container.add(mainPanel);
+		container.add(interactionPanel);
+		frame.add(container);
+			
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.pack();
+		frame.setLocationRelativeTo(null);
+		frame.setVisible(true);			
 	}
 
-	
+	// Removes an Animal from the ArrayList animals and the Grid
 	protected void removeAnimal(Animal animal) {
 		animals.remove(animal);
 		grid.removeAnimal(animal);
 	}
 	
-	
+	// This method is called for every step during the simulation
 	public void simulationStep(){	
 		Collections.shuffle(animals);
 		for(Animal animal:animals){
