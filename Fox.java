@@ -2,25 +2,21 @@
 public class Fox extends Animal{
 
 	
-	@Override
-	public void act() {
-		// TODO Auto-generated method stub
-		
+	public Fox(SimulationController controller){
+		super(controller);
+		this.age = 0;
+		this.energy = 6;
+		this.moveCost = 0.40;
+		this.metabolism = 4;
+		this.vision = 4;
+		this.procreateCost = 16;
+		this.procreateReq = 10;
 	}
-
-	@Override
-	public void look() {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
+	
+	
 	@Override
 	public void decide() {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
-	public void remove() {
 		// TODO Auto-generated method stub
 		
 	}
