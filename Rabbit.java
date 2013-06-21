@@ -7,7 +7,7 @@ public class Rabbit extends Animal{
 		this.age = 0;
 		this.energy = 6;
 		this.moveCost = 0.40;
-		this.metabolism = 4;
+		this.metabolism = 2;
 		this.vision = 4;
 		this.procreateCost = 16;
 		this.procreateReq = 10;
